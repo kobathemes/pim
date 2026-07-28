@@ -37,8 +37,9 @@
   --r:16px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:'Archivo',sans-serif;font-weight:500;line-height:1.6;overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Archivo',sans-serif;font-weight:500;line-height:1.6;overflow-x:hidden;width:100%;max-width:100%}
+img,svg{max-width:100%}
 h1,h2,h3,.blk{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-.01em;line-height:1.05}
 .hand{font-family:'Caveat',cursive;font-weight:700}
 a{color:inherit;text-decoration:none}
@@ -121,6 +122,12 @@ nav .btn{padding:11px 20px;font-size:13.5px;box-shadow:4px 4px 0 #000}
 .rv{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
 .rv.on{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+/* ---------- intro ---------- */
+.intro{padding-bottom:26px}
+.intro + section{padding-top:30px}
+.intro-lead{font-size:clamp(19px,2.4vw,25px);font-weight:700;color:var(--ink);max-width:760px;margin:4px auto 20px;line-height:1.5}
+.intro-body{font-size:clamp(16px,1.9vw,18.5px);font-weight:600;color:var(--muted);max-width:680px;margin:0 auto 26px;line-height:1.6}
+.intro-punch{font-family:'Archivo Black';text-transform:uppercase;font-size:clamp(18px,2.5vw,27px);line-height:1.28;max-width:720px;margin:0 auto}
 /* ---------- letter ---------- */
 .note-avatar{width:232px;aspect-ratio:4/5;border-radius:18px;overflow:hidden;margin:0 auto 26px;border:var(--bd);box-shadow:8px 8px 0 var(--pink);transform:rotate(-3deg)}
 .note-avatar img{width:100%;height:100%;object-fit:cover}
@@ -171,7 +178,7 @@ nav .btn{padding:11px 20px;font-size:13.5px;box-shadow:4px 4px 0 #000}
 .wk li::before{content:"→";position:absolute;left:0;font-weight:900}
 /* ---------- math ---------- */
 .math{text-align:center}
-.big-num{font-family:'Archivo Black';font-size:clamp(56px,9vw,124px);letter-spacing:-.02em;line-height:1;color:var(--ink);background:var(--yellow);display:inline-block;padding:6px 28px;border:var(--bd);border-radius:var(--r);box-shadow:var(--sh-lg);transform:rotate(-1deg)}
+.big-num{font-family:'Archivo Black';font-size:clamp(44px,11vw,124px);letter-spacing:-.02em;line-height:1;color:var(--ink);background:var(--yellow);display:inline-block;max-width:100%;padding:6px clamp(14px,4vw,28px);border:var(--bd);border-radius:var(--r);box-shadow:var(--sh-lg);transform:rotate(-1deg)}
 .math-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:36px 0 22px;font-size:clamp(15px,2vw,19px);font-weight:700;color:rgba(245,241,232,.7)}
 .math-row b{color:var(--bg);background:none;font-family:'Archivo Black';font-size:1.15em}
 .math-row .ten{background:var(--pink);color:var(--ink);padding:2px 10px;border-radius:8px;border:2px solid var(--bg)}
@@ -179,7 +186,7 @@ nav .btn{padding:11px 20px;font-size:13.5px;box-shadow:4px 4px 0 #000}
 .math .hand-note{font-size:28px;color:var(--yellow);margin-top:26px;transform:rotate(-2deg);display:inline-block}
 .math .disclaim{display:block;max-width:560px;margin:18px auto 0;font-size:12.5px;font-weight:600;color:rgba(245,241,232,.5)}
 /* ---------- what you get / value stack ---------- */
-.get-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:54px}
+.get-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px;margin-top:54px}
 .get{background:var(--paper);border:var(--bd);border-radius:var(--r);padding:30px;box-shadow:var(--sh);transition:transform .2s,box-shadow .2s;position:relative}
 .get:hover{transform:translate(-4px,-4px);box-shadow:10px 10px 0 #000}
 .get .val{position:absolute;top:-14px;right:18px;background:var(--lime);border:2px solid #000;border-radius:100px;padding:4px 14px;font-size:12.5px;font-weight:800;box-shadow:3px 3px 0 #000}
@@ -197,7 +204,7 @@ nav .btn{padding:11px 20px;font-size:13.5px;box-shadow:4px 4px 0 #000}
 .fit.yes li::before{content:"✓";position:absolute;left:0;font-weight:900;background:var(--ink);color:var(--lime);width:21px;height:21px;border-radius:6px;display:grid;place-items:center;font-size:13px;top:1px}
 .fit.no li::before{content:"✕";position:absolute;left:0;font-weight:900;background:#e6e0d4;color:var(--muted);width:21px;height:21px;border-radius:6px;display:grid;place-items:center;font-size:12px;top:1px}
 /* ---------- results ---------- */
-.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:54px}
+.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px;margin-top:54px}
 .res{background:var(--paper);border:var(--bd);border-radius:var(--r);padding:30px;box-shadow:var(--sh);color:var(--ink);transition:transform .2s,box-shadow .2s}
 .res:hover{transform:translate(-4px,-4px) rotate(-.5deg);box-shadow:10px 10px 0 var(--pink)}
 .res .amount{font-family:'Archivo Black';font-size:32px;margin-bottom:12px}
@@ -248,16 +255,23 @@ nav .btn{padding:11px 20px;font-size:13.5px;box-shadow:4px 4px 0 #000}
 .price-photo .quote{position:absolute;bottom:0;left:0;right:0;padding:24px;background:var(--yellow);border-top:var(--bd);font-family:'Archivo Black';font-size:15.5px;line-height:1.4;text-transform:uppercase}
 .price-body{padding:clamp(32px,4vw,50px);text-align:left}
 .price-body .pill{display:inline-block;background:var(--orange);color:#fff;border:var(--bd);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;padding:7px 16px;border-radius:100px;margin-bottom:18px;box-shadow:3px 3px 0 #000;animation:wiggle 4s ease-in-out infinite}
-.price-line{display:flex;align-items:baseline;gap:14px;margin:8px 0 2px}
+.price-line{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin:8px 0 2px}
 .price-line .old{font-size:24px;font-weight:700;color:var(--muted);text-decoration:line-through;opacity:.65}
 .price-line .now{font-family:'Archivo Black';font-size:clamp(54px,6vw,74px);line-height:1}
 .price-body .once{color:var(--muted);font-size:13.5px;font-weight:700;margin-bottom:24px}
 .plist{display:grid;gap:10px;margin:0 0 12px;list-style:none}
 .plist li{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;font-weight:600;color:#26231f;border-bottom:1.5px dashed rgba(0,0,0,.2);padding-bottom:9px}
 .plist li i{font-style:normal;font-weight:800;color:var(--muted);white-space:nowrap}
-.total-line{display:flex;justify-content:space-between;font-weight:800;font-size:15.5px;margin-bottom:24px;text-transform:uppercase}
+.total-line{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-weight:800;font-size:15.5px;margin-bottom:24px;text-transform:uppercase}
 .total-line .tv{background:var(--lime);border:2px solid #000;border-radius:8px;padding:1px 10px}
-.guarantee{margin-top:14px;color:var(--muted);font-size:13px;font-weight:600}
+.coupon{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;background:var(--lime);border:2.5px dashed #000;border-radius:12px;padding:12px 14px;font-weight:800;font-size:13.5px;margin:2px 0 16px;text-transform:uppercase;letter-spacing:.02em;text-align:center}
+.coupon b{background:var(--yellow);border:2px solid #000;border-radius:6px;padding:1px 9px;letter-spacing:.14em}
+.voucher{align-self:center;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;background:var(--lime);border:2.5px dashed #000;border-radius:12px;padding:6px 14px;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.05em;box-shadow:3px 3px 0 #000;transform:rotate(-2deg);line-height:1.15}
+.voucher b{letter-spacing:.16em;font-size:15px}
+.voucher small{font-weight:700;font-size:10px;letter-spacing:.08em;color:var(--muted)}
+.cta-social{text-align:center;font-size:13.5px;font-weight:700;color:var(--muted);margin-top:12px}
+.cta-social b{color:var(--ink)}
+.guarantee{margin-top:10px;color:var(--muted);font-size:13px;font-weight:600}
 .pay-badges{display:flex;gap:8px;align-items:center;margin-top:14px;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);flex-wrap:wrap}
 .pay-badges span{background:var(--bg);border:2px solid #000;border-radius:6px;padding:3px 9px}
 /* ---------- faq ---------- */
@@ -315,6 +329,60 @@ footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:rgba(245,24
 .note-avatar img{object-position:center 20%}       /* desk selfie */
 .about-photos .p2 img{object-position:center 58%}  /* laptop by the sea */
 .about-photos .p1 img{object-position:center 40%}  /* sunglasses selfie */
+/* ---------- fine mobile polish (phones) ---------- */
+@media(max-width:600px){
+  section{padding:52px 18px}
+  .topbar{font-size:11.5px;letter-spacing:.03em;padding:10px 12px;line-height:1.35}
+  nav{padding:12px 16px}
+  nav .btn{padding:10px 15px;font-size:12.5px}
+  .logo{font-size:17px}
+  .hero{padding:28px 18px 60px}
+  .hero h1{font-size:clamp(30px,8.5vw,44px);line-height:1.14}
+  .badge{font-size:12px;padding:8px 15px}
+  .hero-cta .btn{width:100%}
+  /* stickers pulled fully inside so nothing clips */
+  .portrait-stack{width:min(330px,100%)}
+  .sticker{font-size:12px;padding:9px 12px;gap:7px}
+  .sticker small{font-size:11px}
+  .st1{top:6%;left:2px}
+  .st2{bottom:16%;right:2px}
+  .st3{bottom:-14px;left:4%}
+  .note-avatar{width:190px}
+  .letter{padding:30px 22px}
+  .letter p,.about p{font-size:15.5px}
+  h2{font-size:clamp(28px,7.5vw,40px)}
+  .big-num{padding:6px 14px}
+  .math-note,.math .hand-note{font-size:clamp(15px,4.4vw,20px)}
+  /* about overlap photo kept in-bounds */
+  .about-photos{margin-right:26px}
+  .about-photos .p2{width:44%;right:-14px;bottom:-22px}
+  .about-photos .hand-tag{left:0;font-size:24px}
+  .stat{padding:12px 16px}
+  .stat .v{font-size:22px}
+  /* pricing */
+  .price-body{padding:28px 22px}
+  .price-line .now{font-size:clamp(48px,15vw,64px)}
+  .plist li{font-size:13.5px}
+  .voucher{font-size:11px;padding:5px 12px}
+  .voucher b{font-size:13.5px}
+  .total-line{font-size:14px}
+  .guarantee-wrap,.support-wrap{box-shadow:8px 8px 0 var(--lime);padding:26px 22px}
+  /* faq / final */
+  .faq button{padding:17px 18px;font-size:14.5px}
+  .final h2{font-size:clamp(30px,8vw,46px)}
+  .final .btn{width:100%;font-size:16px!important;padding:18px 24px!important}
+  .path{padding:22px}
+  /* sticky bar tightened */
+  .sticky-cta{padding:10px 14px}
+  .sticky-cta .p{font-size:17px}
+  .sticky-cta .btn{padding:11px 16px;font-size:12.5px}
+}
+@media(max-width:360px){
+  .hero h1{font-size:26px}
+  .sticker{font-size:11px;padding:7px 10px}
+  .price-line .now{font-size:46px}
+  .voucher{transform:none}
+}
 /* ---------- reduced motion: always show content, kill loops ---------- */
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -327,14 +395,14 @@ footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:rgba(245,24
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
-<div class="topbar">🔥 Early-bird open: <b>save 100€</b> · closes in <span class="cd" id="cd">--:--:--</span></div>
+<div class="topbar">🔥 Code <b>EARLY</b> = 40% OFF · offer closes in <span class="cd" id="cd">--:--:--</span></div>
 <nav id="nav">
   <a class="logo" href="#top">Kotryna<span>Bass</span></a>
   <div class="nav-links">
     <a class="lnk" href="#how">How it works</a>
     <a class="lnk" href="#results">Results</a>
     <a class="lnk" href="#faq">FAQ</a>
-    <a class="btn" href="#pricing">Join for 97€</a>
+    <a class="btn" href="#pricing">Join for 197€</a>
   </div>
 </nav>
 <!-- HERO -->
@@ -348,7 +416,7 @@ footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:rgba(245,24
         <a class="btn" href="#pricing">YES! Count me in <span class="arr">→</span></a>
         <a class="btn white" href="#how">Show me the system</a>
       </div>
-      <p class="hero-note rv on d3">One payment: <s>197€</s> <b>97€</b><span class="save">you save 100€</span></p>
+      <p class="hero-note rv on d3">One payment: <b>197€</b> <span class="save">🎟️ code EARLY = 40% off</span></p>
       <div class="trust-row rv on d3"><span class="stars">★★★★★</span> Loved by 2,000+ students · 90 days of personal support from me</div>
     </div>
     <div class="portrait-stack rv on d1">
@@ -367,6 +435,16 @@ footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:rgba(245,24
     <span>"Made $5,000 my first month" · Sarah <i>✦</i> "$14,000+ on Etsy so far" · Laura <i>✦</i> "50 members in my first launch" · Ieva <i>✦</i> "These lessons are GOLD" · Darriah <i>✦</i> "Beats every 5-figure course I took" · Cadiz <i>✦</i></span>
   </div>
 </div>
+<!-- INTRO -->
+<section class="intro">
+  <div class="wrap" style="max-width:860px;text-align:center">
+    <div class="eyebrow rv">What is Passive Income Magic 4.0?</div>
+    <h2 class="rv">Turn one idea into income that shows up <span class="hl">whether you're working or not.</span></h2>
+    <p class="intro-lead rv d1">Passive Income Magic 4.0 is my complete <b>21-day system</b> for creating, launching and selling digital products — with <b>Claude AI doing the heavy lifting</b> right beside you.</p>
+    <p class="intro-body rv d2">You bring the willingness. It hands you the niche, the product, the shop, the exact words that sell it, and <b>one clear step for every single day.</b> No audience to build first. No tech to fight. No staring at a blank page wondering what's next.</p>
+    <p class="intro-punch rv d2">By day 21 you're not sitting on more information. You have a <span class="hl-l">real product, live and selling</span> — and a skill nobody can ever take back.</p>
+  </div>
+</section>
 <!-- LETTER -->
 <section>
   <div class="wrap" style="text-align:center">
@@ -417,11 +495,11 @@ footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:rgba(245,24
     <p class="sub rv d1">One clear step per day. Not "figure it out". <b>Do this, exactly this, then tick the box.</b> Miss a day? Nothing breaks. It's your pace, my map.</p>
     <div class="tl">
       <div class="wk rv"><span class="badge-wk">Week 1 · Days 1–7</span><h3>Idea → Validated</h3><div class="days">Leave with a product idea people already want</div>
-        <ul><li>Find your profitable niche with Claude</li><li>Research prompts that prove demand before you build</li><li>Mindset work that gets you out of the stuck phase</li></ul></div>
+        <ul><li>Find your profitable niche with Claude</li><li>Claude research prompts that prove demand before you build</li><li>Mindset work that gets you out of the stuck phase</li></ul></div>
       <div class="wk rv d1"><span class="badge-wk">Week 2 · Days 8–14</span><h3>Validated → Built</h3><div class="days">Your product, done in days, not months</div>
         <ul><li>My exact Claude prompt vault for creation</li><li>Make it gorgeous in Canva, no design skills</li><li>Shop live: Etsy, Stan Store or Gumroad</li></ul></div>
       <div class="wk rv d2"><span class="badge-wk">Week 3 · Days 15–21</span><h3>Built → Selling</h3><div class="days">Switch on the passive engine</div>
-        <ul><li>Personal & faceless marketing plans</li><li>Daily sales routine, under 1 hour a day</li><li>From first sale to sales in your sleep</li></ul></div>
+        <ul><li>Personal & faceless marketing, Claude-written</li><li>Daily sales routine, under 1 hour a day</li><li>From first sale to sales in your sleep</li></ul></div>
     </div>
   </div>
 </section>
@@ -444,13 +522,13 @@ footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:rgba(245,24
     <h2 class="rv">Everything you get <span class="hl">the moment you say YES</span></h2>
     <p class="sub rv d1">This isn't a course you watch. <b>It's a system you run.</b> Every single piece exists for one outcome: your product, live and selling, in 21 days.</p>
     <div class="get-grid">
-      <div class="get rv"><span class="val">worth 497€</span><span class="emoji">🗺️</span><h3>21-Day Roadmap</h3><p>One action per day, updated for 2026. Follow it and you launch. It's that simple, because I made it that simple.</p></div>
+      <div class="get rv"><span class="val">worth 497€</span><span class="emoji">🗺️</span><h3>21-Day Claude Monetisation Roadmap</h3><p>One Claude-powered action per day, updated for 2026. Follow it and you launch. It's that simple, because I made it that simple.</p></div>
       <div class="get rv d1"><span class="val">worth 297€</span><span class="emoji">🤖</span><h3>Claude Prompt Vault</h3><p>My exact prompts for research, product creation, sales copy and listings. Copy. Paste. Profit. No AI experience needed.</p></div>
-      <div class="get rv d2"><span class="val">worth 297€</span><span class="emoji">🎁</span><h3>Done-For-You Products</h3><p>260+ pages of trending PLR products, ready to rebrand and sell as your own. You could earn before you even finish building.</p></div>
-      <div class="get rv"><span class="val">worth 97€</span><span class="emoji">🛍️</span><h3>Niche Shop Ideas</h3><p>Profitable shop concepts chosen for you. Steal them instead of staring at a blank page for three weeks.</p></div>
-      <div class="get rv d1"><span class="val">worth 197€</span><span class="emoji">📣</span><h3>Marketing + Daily Sales Plan</h3><p>With your face or fully faceless. Your call. A daily sales routine that takes under an hour and compounds.</p></div>
-      <div class="get rv d2"><span class="val">worth 97€</span><span class="emoji">🧠</span><h3>Mindset Workshops</h3><p>Because the #1 reason people stay broke isn't strategy, it's staying stuck. These drag you into action.</p></div>
-      <div class="get rv"><span class="val">bonus · 147€</span><span class="emoji">🎨</span><h3>Etsy Booster + Canva Trainings</h3><p>Master trainings: boost your Etsy sales and design beautiful products fast, even if you've never designed anything.</p></div>
+      <div class="get rv d2"><span class="val">worth 297€</span><span class="emoji">🎁</span><h3>Done-For-You Products</h3><p>260+ pages of trending PLR products, ready to rebrand with Claude and sell as your own. You could earn before you even finish building.</p></div>
+      <div class="get rv"><span class="val">worth 97€</span><span class="emoji">🛍️</span><h3>Niche Shop Ideas</h3><p>Profitable shop concepts chosen for you, with Claude prompts to validate them fast. Steal them instead of staring at a blank page for three weeks.</p></div>
+      <div class="get rv d1"><span class="val">worth 197€</span><span class="emoji">📣</span><h3>Marketing + Daily Sales Plan</h3><p>With your face or fully faceless. Your call. Claude drafts your captions and listings, and a daily sales routine that takes under an hour and compounds.</p></div>
+      <div class="get rv d2"><span class="val">worth 97€</span><span class="emoji">🧠</span><h3>Mindset &amp; Momentum Training</h3><p>The real reason most people never start isn't strategy — it's self-doubt. These focused sessions clear it and move you into action.</p></div>
+      <div class="get rv"><span class="val">bonus · 147€</span><span class="emoji">🎨</span><h3>Etsy AI Academy + Canva Trainings</h3><p>Master trainings: boost your Etsy sales and design beautiful products fast, even if you've never designed anything.</p></div>
       <div class="get rv d1"><span class="val">worth 297€</span><span class="emoji">💬</span><h3>90 Days of MY Support</h3><p>Stuck at 11pm on day 12? Message me. You get direct personal support for 90 days. You are never doing this alone.</p></div>
       <div class="get rv d2"><span class="val">priceless</span><span class="emoji">♾️</span><h3>Lifetime Access + Updates</h3><p>Keep everything forever, including every future update. Life gets busy? Pause. It'll be here. You'll be ahead.</p></div>
     </div>
@@ -484,8 +562,8 @@ footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:rgba(245,24
         <h3>🚫 This isn't for you if…</h3>
         <ul>
           <li>You want a "get rich overnight" button with no effort at all</li>
-          <li>You'll buy it and never open it (please don't, keep your 97€)</li>
-          <li>You're looking for investment tips or crypto trading</li>
+          <li>You'll buy it and never open it (please don't, keep your €)</li>
+          <li>You're not open to letting AI like Claude do the heavy lifting</li>
           <li>You expect guaranteed income (nobody honest can promise that)</li>
           <li>You're not willing to hit publish on something imperfect</li>
         </ul>
@@ -571,32 +649,34 @@ footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:rgba(245,24
 <section class="dark" id="pricing">
   <div class="wrap" style="text-align:center">
     <div class="eyebrow rv">Join today</div>
-    <h2 class="rv">One decision. Less than <span class="hl-y" style="color:#000">5€ a day.</span> A skill that pays you for life.</h2>
+    <h2 class="rv">One payment today. <span class="hl-y" style="color:#000">A skill that pays you for life.</span></h2>
     <div class="price-wrap rv d1">
       <div class="price-photo">
         <img src="https://static.showit.co/800/SB8wgJGwQragdnduBx8gZQ/168573/dsc02092.jpg" alt="Kotryna Bass">
         <div class="quote">"You don't need to be special to win. You need the right system."</div>
       </div>
       <div class="price-body">
-        <span class="pill">🔥 Early bird: save 100€</span>
+        <span class="pill">🔥 Code EARLY · 40% off</span>
         <h3 class="blk" style="font-size:24px;text-transform:uppercase">Passive Income Magic 4.0</h3>
         <p style="font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-top:6px"><span class="hl-l">The newest version · built for the AI era</span></p>
-        <div class="price-line"><span class="old">197€</span><span class="now">97€</span></div>
+        <div class="price-line"><span class="now">197€</span><span class="voucher">🎟️ code <b>EARLY</b><small>40% off</small></span></div>
         <p class="once">One-time payment · No subscription · Lifetime access</p>
+        <div class="coupon">🎟️ Paste code <b>EARLY</b> at checkout to take <b>40% off</b></div>
         <ul class="plist">
-          <li>21-day step-by-step roadmap (2026)<i>497€</i></li>
+          <li>21-day step-by-step Claude monetisation roadmap (2026)<i>497€</i></li>
           <li>Claude AI prompt vault<i>297€</i></li>
           <li>Done-for-you product bundle, 260+ pages<i>297€</i></li>
           <li>Niche shop ideas chosen for you<i>97€</i></li>
           <li>Marketing + daily sales plan<i>197€</i></li>
-          <li>Mindset workshops<i>97€</i></li>
-          <li>Bonus: Etsy Booster + Canva trainings<i>147€</i></li>
+          <li>Mindset &amp; momentum training<i>97€</i></li>
+          <li>Bonus: Etsy AI Academy + Canva trainings<i>147€</i></li>
           <li>90 days of personal support from me<i>297€</i></li>
         </ul>
-        <div class="total-line"><span>Total value:</span><span class="tv">1.926€ → yours for 97€</span></div>
-        <a class="btn yellow" style="width:100%" href="#" id="buyBtn">YES! Start my 21 days, 97€ <span class="arr">→</span></a>
-        <p class="guarantee">🔒 Secure checkout · Instant access · 90 days of personal support from me</p>
-        <div class="pay-badges"><span>Visa</span><span>Mastercard</span><span>PayPal</span><span>Apple Pay</span></div>
+        <div class="total-line"><span>Total value:</span><span class="tv">1.926€ → yours for 197€</span></div>
+        <a class="btn yellow" style="width:100%" href="https://kotrynabass.podia.com/pim-4-0-ai-income-sprint/buy" id="buyBtn">YES! Start my 21 days <span class="arr">→</span></a>
+        <p class="cta-social">⭐ Join <b>2,000+ students</b> already inside · <b>Payment plans available</b></p>
+        <p class="guarantee">🔒 Secure checkout · Instant access · Lifetime access + 90 days of my personal support</p>
+        <div class="pay-badges"><span>Visa</span><span>Mastercard</span><span>PayPal</span></div>
       </div>
     </div>
   </div>
@@ -628,7 +708,7 @@ footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:rgba(245,24
       <div class="path bad rv d1"><span class="t">😴 Person one</span>Still scrolling. Still saving posts about passive income "for later." Still telling themselves next month is the month. Exactly where they are today, just 21 days older.</div>
       <div class="path good rv d2"><span class="t">⚡ Person two</span>Has a digital product LIVE. A shop that's open 24/7. Payment notifications lighting up their phone. And a skill nobody can ever take away from them. That's not luck. That's a decision.</div>
     </div>
-    <a class="btn yellow rv d2" style="font-size:18px;padding:20px 42px" href="#pricing">I'm person two, let's go <span class="arr">→</span></a>
+    <a class="btn yellow rv d2" style="font-size:18px;padding:20px 42px" href="https://kotrynabass.podia.com/pim-4-0-ai-income-sprint/buy">I'm person two, let's go <span class="arr">→</span></a>
     <p class="rv d3" style="margin-top:22px;font-size:14px;font-weight:600">Questions? DM me on Instagram <a href="https://instagram.com/kotrynabass" style="color:var(--yellow);text-decoration:underline">@kotrynabass</a>. I answer personally.</p>
   </div>
 </section>
@@ -638,7 +718,7 @@ footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:rgba(245,24
   <p class="disc">Earnings and income examples shown are results achieved by specific students and are not typical or guaranteed. Your results depend on your effort, niche and market. This offer is not affiliated with or endorsed by Etsy, Gumroad, Stan or Anthropic.</p>
 </footer>
 <div class="sticky-cta">
-  <div class="p"><s>197€</s>97€</div>
+  <div class="p">197€ <span style="font-family:'Archivo';font-weight:800;font-size:11px;color:var(--ink);background:var(--lime);border:2px solid #000;border-radius:6px;padding:1px 6px">EARLY −40%</span></div>
   <a class="btn" href="#pricing">Join PIM 4.0</a>
 </div>
 <script>
