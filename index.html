@@ -78,7 +78,9 @@ nav.scrolled{border-color:var(--ink)}
 .nav-links .lnk{font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.04em}
 .nav-links .lnk:hover{color:var(--teal)}
 nav .btn{padding:11px 20px;font-size:13.5px;box-shadow:4px 4px 0 #000}
+.nav-cta .nav-short{display:none}
 @media(max-width:720px){.nav-links .lnk{display:none}}
+@media(max-width:600px){.nav-cta .nav-full{display:none}.nav-cta .nav-short{display:inline}}
 .hero{padding:56px 24px 80px;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center}
 .hero h1{font-size:clamp(34px,4.8vw,62px);text-transform:uppercase;line-height:1.12}
@@ -372,7 +374,7 @@ footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:rgba(245,24
     <a class="lnk" href="#how">How it works</a>
     <a class="lnk" href="#results">Results</a>
     <a class="lnk" href="#faq">FAQ</a>
-    <a class="btn" href="#pricing">Start the 21-day sprint</a>
+    <a class="btn nav-cta" href="#pricing"><span class="nav-full">Start the 21-day sprint</span><span class="nav-short">Join now →</span></a>
   </div>
 </nav>
 <header class="hero" id="top">
