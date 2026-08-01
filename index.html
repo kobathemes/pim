@@ -88,7 +88,8 @@ nav .btn{padding:11px 20px;font-size:13.5px;box-shadow:4px 4px 0 #000}
 .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
 .hero-note{margin-top:20px;font-size:14.5px;font-weight:700}
 .hero-note s{opacity:.5}
-.hero-note .save{display:inline-block;background:var(--lime);border:2px solid #000;border-radius:8px;padding:2px 8px;margin-left:6px;max-width:100%}
+.hero-note .hn-main{display:inline-block}
+.hero-note .save{display:inline-block;background:var(--lime);border:2px solid #000;border-radius:8px;padding:3px 10px;margin-left:8px;max-width:100%;white-space:normal;line-height:1.35}
 .trust-row{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:13.5px;font-weight:700;color:var(--muted);flex-wrap:wrap}
 .trust-row .stars{color:var(--ink);letter-spacing:1px}
 .portrait-stack{position:relative;justify-self:center;width:min(400px,100%);margin-top:26px}
@@ -235,7 +236,7 @@ nav .btn{padding:11px 20px;font-size:13.5px;box-shadow:4px 4px 0 #000}
 .price-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .price-photo .quote{position:absolute;bottom:0;left:0;right:0;padding:24px;background:var(--yellow);border-top:var(--bd);font-family:'Archivo Black';font-size:15.5px;line-height:1.4;text-transform:uppercase}
 .price-body{padding:clamp(32px,4vw,50px);text-align:left}
-.price-body .pill{display:inline-block;background:var(--orange);color:#fff;border:var(--bd);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;padding:7px 16px;border-radius:100px;margin-bottom:18px;box-shadow:3px 3px 0 #000;animation:wiggle 4s ease-in-out infinite}
+.price-body .pill{display:inline-block;background:var(--orange);color:#fff;border:var(--bd);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;padding:7px 16px;border-radius:100px;margin-bottom:18px;box-shadow:3px 3px 0 #000;animation:wiggle 4s ease-in-out infinite;max-width:100%;white-space:normal;line-height:1.5}
 .price-line{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin:8px 0 2px}
 .price-line .old{font-size:24px;font-weight:700;color:var(--muted);text-decoration:line-through;opacity:.65}
 .price-line .now{font-family:'Archivo Black';font-size:clamp(54px,6vw,74px);line-height:1}
@@ -311,8 +312,9 @@ footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:rgba(245,24
   .hero{padding:28px 18px 60px}
   .hero h1{font-size:clamp(30px,8.5vw,44px);line-height:1.14}
   .badge{font-size:clamp(10px,3vw,12px);padding:7px 12px;letter-spacing:.01em;white-space:nowrap;max-width:100%}
-  .hero-note{font-size:13.5px;line-height:1.7}
-  .hero-note .save{display:inline-block;margin-left:0;margin-top:8px;font-size:12.5px;padding:3px 9px;white-space:normal}
+  .hero-note{font-size:13.5px;line-height:1.6}
+  .hero-note .hn-main{display:block}
+  .hero-note .save{display:inline-block;margin-left:0;margin-top:10px;font-size:12.5px;padding:4px 12px}
   .hero-cta .btn{width:100%}
   .portrait-stack{width:min(330px,100%)}
   .sticker{font-size:12px;padding:9px 12px;gap:7px}
@@ -383,7 +385,7 @@ footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:rgba(245,24
         <a class="btn" href="#pricing">MAKE MONEY WITH CLAUDE IN 21 DAYS <span class="arr">→</span></a>
         <a class="btn white" href="#how">Show me the system</a>
       </div>
-      <p class="hero-note rv on d3">Join today for <b>197€</b> · one payment · <span class="save">🎁 free Etsy AI Academy bonus (worth 97€)</span></p>
+      <p class="hero-note rv on d3"><span class="hn-main">Join today for <b>197€</b> · one payment</span><span class="save">🎁 Free bonus: Etsy AI Academy · worth 97€</span></p>
       <div class="trust-row rv on d3"><span class="stars">★★★★★</span> Loved by 2,000+ students · 90 days of personal support from me</div>
     </div>
     <div class="portrait-stack rv on d1">
