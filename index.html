@@ -381,11 +381,12 @@ footer .disc{max-width:620px;margin:12px auto 0;font-size:11.5px;color:rgba(245,
 nav .btn{white-space:nowrap}
 @media(min-width:861px){.hero-grid{grid-template-columns:1.2fr .8fr}}
 @media(max-width:340px){nav .btn{font-size:11.5px;padding:9px 11px}.logo{font-size:15px}}
+.urgent{font-size:14px;font-weight:800;color:#000;background:var(--yellow);border:2px solid #000;border-radius:10px;padding:8px 12px;margin:0 auto 16px;display:inline-block}
 </style>
 </head>
 <body>
 
-<a class="topbar" href="#offer">🎂 Birthday sale · use code <b>BDAY35</b> at checkout</a>
+<a class="topbar" href="#offer">🤖 New: now with the <b>Digital Product Engine</b></a>
 
 <nav id="nav">
   <a class="logo" href="#top">Kotryna<span>Bass</span></a>
@@ -397,8 +398,8 @@ nav .btn{white-space:nowrap}
   <div class="wrap hero-grid">
     <div>
       <h1>AI Income <span class="hl-y">Sprint</span></h1>
-      <p class="promise">Make money from home with AI. <span class="hl">The AI does the heavy lifting.</span></p>
-      <p class="hero-sub">You bring the idea, the AI builds your product, writes your listing and plans your traffic. You just say yes and sell.</p>
+      <p class="promise">Make money from home with AI. <span class="hl">Claude does the heavy lifting.</span></p>
+      <p class="hero-sub">You bring the idea. Claude and my Digital Product Engine build your product, write your listing and plan your traffic. You just say yes and sell.</p>
       <div class="engine-pill"><span class="bot">🤖</span><span>Includes the <b>Digital Product Engine</b>: your ready-to-sell product in minutes</span><span class="live"><i></i>AI</span></div>
       <div class="chips"><span>🤖 AI does the heavy lifting</span><span>⚡ Ready in minutes</span><span>✓ Made for beginners</span></div>
       <a class="btn" href="#offer">Start the Sprint <span class="arr">→</span></a>
@@ -536,8 +537,8 @@ nav .btn{white-space:nowrap}
     <div class="reveal rv">
       <p class="reveal-k">All of this, including the Digital Product Engine:</p>
       <div class="reveal-p">97€</div>
-      <div class="coupon">🎂 Birthday sale: use code <button class="code" type="button" data-code="BDAY35">BDAY35 <span>copy</span></button> at checkout</div>
       <p class="reveal-s">One payment, yours forever. Or <b>split it into 2 payments</b> at checkout.</p>
+      <p class="urgent">⏳ AI made this easier for everyone. The ones who start now get there first.</p>
       <a class="btn yellow" href="#offer">Unlock everything <span class="arr">→</span></a>
     </div>
   </div>
@@ -595,7 +596,7 @@ nav .btn{white-space:nowrap}
       <div class="name">AI Income Sprint</div>
       <p class="once" style="margin:2px 0 0">with the 🤖 Digital Product Engine</p>
       <div class="price">97€</div>
-      <div class="coupon">🎂 Birthday sale: use code <button class="code" type="button" data-code="BDAY35">BDAY35 <span>copy</span></button> at checkout</div>
+      <p class="urgent">⏳ Every day you wait is another day your shop isn't selling.</p>
       <p class="anchor">One payment. No monthly fees. Yours forever.</p>
       <p class="split">💳 Prefer to spread it out? <b>Split it into 2 payments</b> at checkout.</p>
       <p class="recap">Digital Product Engine · setup guides · Claude prompt vault · 260+ pages of products · niche ideas · daily sales plan · 90 days of support · lifetime updates</p>
@@ -619,7 +620,6 @@ nav .btn{white-space:nowrap}
       <div class="faq rv"><button aria-expanded="false">Can I split the payment? <span class="pm">+</span></button><div class="body"><p>Yes. At checkout you can choose to pay in full or split it into 2 payments. You get full, instant access either way.</p></div></div>
       <div class="faq rv"><button aria-expanded="false">How long do I have access? <span class="pm">+</span></button><div class="body"><p>Forever. Including every future update, so as AI changes, the Engine and guides do too.</p></div></div>
       <div class="faq rv"><button aria-expanded="false">How much time do I need? <span class="pm">+</span></button><div class="body"><p>Your product takes minutes. After that, about an hour most days to launch and grow your shop. It fits around a job, kids and real life.</p></div></div>
-      <div class="faq rv"><button aria-expanded="false">How do I use the BDAY35 code? <span class="pm">+</span></button><div class="body"><p>At checkout, enter <b>BDAY35</b> in the coupon field and your birthday discount is applied automatically.</p></div></div>
     </div>
   </div>
 </section>
@@ -630,7 +630,7 @@ nav .btn{white-space:nowrap}
     <h2 class="rv">Next month you could be selling. <span class="hl" style="color:#000">Or still scrolling.</span></h2>
     <p class="rv" style="max-width:560px;margin:-6px auto 26px;font-size:17px;font-weight:600;color:rgba(245,241,232,.85)">The next few weeks will pass either way. The only question is what you'll have to show for them.</p>
     <a class="btn yellow rv" href="https://kotrynabass.podia.com/pim-4-0-ai-income-sprint/buy">Yes! I'm in for 97€ <span class="arr">→</span></a>
-    <p class="rv" style="margin-top:16px;font-size:14px;font-weight:700;color:rgba(245,241,232,.75)">🎂 Use code <b style="color:var(--yellow)">BDAY35</b> at checkout · 🛡️ First-sale guarantee</p>
+    <p class="rv" style="margin-top:16px;font-size:14px;font-weight:700;color:rgba(245,241,232,.75)">🛡️ First-sale guarantee · instant access</p>
   </div>
 </section>
 
@@ -663,8 +663,7 @@ document.querySelectorAll('.faq button').forEach(btn=>{
 const sh=document.getElementById('shots');
 if(sh){document.querySelectorAll('.sl-btn').forEach(b=>b.addEventListener('click',()=>{sh.scrollBy({left:(b.classList.contains('next')?1:-1)*(sh.clientWidth*0.8),behavior:'smooth'})}));}
 const insideSec=document.getElementById('inside'),stickySub=document.getElementById('stickySub');
-addEventListener('scroll',()=>{if(insideSec&&stickySub&&insideSec.getBoundingClientRect().bottom<innerHeight){stickySub.textContent='97€ · code BDAY35'}},{passive:true});
-document.querySelectorAll('.code').forEach(b=>b.addEventListener('click',()=>{const c=b.dataset.code;const done=()=>{const sp=b.querySelector('span');sp.textContent='copied!';setTimeout(()=>sp.textContent='copy',1600)};if(navigator.clipboard){navigator.clipboard.writeText(c).then(done,done)}else{done()}}));
+addEventListener('scroll',()=>{if(insideSec&&stickySub&&insideSec.getBoundingClientRect().bottom<innerHeight){stickySub.textContent='97€ · instant access'}},{passive:true});
 </script>
 </body>
 </html>
